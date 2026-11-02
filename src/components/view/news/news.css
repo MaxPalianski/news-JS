@@ -164,3 +164,13 @@
         padding-left: 25px;
     }
 }
+@media (max-width: 639px) {
+    .news__item {
+        margin: 0.5rem;
+        max-width: 100%;
+    }
+
+    .news__item .news__description h2 {
+        font-size: 1.3rem;
+    }
+}

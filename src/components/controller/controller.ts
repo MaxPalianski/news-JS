@@ -1,4 +1,5 @@
 import AppLoader from './appLoader';
+import { Endpoints } from './enums';
 
 type Callback<T> = (data?: T) => void;
 
@@ -6,7 +7,7 @@ class AppController extends AppLoader {
     public getSources<T>(callback: Callback<T>): void {
         super.get(
             {
-                endpoint: 'top-headlines/sources',
+                endpoint: Endpoints.Sources,
             },
             callback
         );
@@ -23,7 +24,7 @@ class AppController extends AppLoader {
                     newsContainer.setAttribute('data-source', sourceId || '');
                     super.get(
                         {
-                            endpoint: 'everything',
+                            endpoint: Endpoints.Everything,
                             options: {
                                 sources: sourceId || '',
                             },

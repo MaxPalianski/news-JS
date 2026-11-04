@@ -1,4 +1,5 @@
 import type { INewsArticle } from '../../../types';
+import './news.css';
 
 class News {
     public draw(data: INewsArticle[]): void {
